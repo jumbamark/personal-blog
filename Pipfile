@@ -12,6 +12,7 @@ django-material-admin = "*"
 sqlparse = "*"
 asgiref = "*"
 "backports.zoneinfo" = "*"
+python-decouple = "*"
 
 [dev-packages]
 
