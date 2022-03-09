@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{%load static%}
+{% block title %} Welcome to IBlogs {% endblock %}
+
+{% block content%}
+
+<div class="container-custom">
+
+    <div class="owl-carousel">
+
+        {% for cat in Categories %}
+        <div class="card item" style="margin-left: 1em;">
+
+            <div class="img-container">
+                <img src=" /media/{{cat.image}}" class="responsive-img" alt="">
+            </div>
+            <div class="card-content">
+                <div class="card-title">
+                    {{cat.title}}
+                </div>
+                <p class="truncate">{{cat.description}}</p>
+                <div class="container mt20 center-align">
+                    <a href="/category/{{cat.url}}" class="btn btn-primary">VIEW</a>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col s12 ">
+            {% for p in Posts %}
+
+            <div class="row">
+
+                <div class="col s12 m8">
+                    {{p.content |truncatewords:100| safe}}
+                    <div>
+                        <a href="/blog/{{p.url}}" class="btn bg-primary">Read More...</a>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <img src="/media/{{p.image}}" class="responsive-img" style="margin-top:50px;" alt="">
+                </div>
+
+            </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
