@@ -129,6 +129,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Folder that we use in production - when we run collectstatic that's where all our static files are gonna go into
+STATIC_ROOT = 'staticfiles'
+
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
