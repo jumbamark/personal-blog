@@ -5,3 +5,5 @@ A project that tests Django knowledge through a blog app that allows the owner t
 * Python v3.8.10
 * Django v4.0.3
 * Materialize
+
+[View site](https://jm-blogs.herokuapp.com/)
